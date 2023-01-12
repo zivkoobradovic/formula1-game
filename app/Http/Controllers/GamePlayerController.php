@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\GamePlayer;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Services\ShareService;
 use App\Exports\ExportGameplayers;
+use App\Services\SendCodeMailToThePlayer;
 use Maatwebsite\Excel\Facades\Excel;
 
 class GamePlayerController extends Controller
@@ -106,12 +108,24 @@ class GamePlayerController extends Controller
             ]
         );
 
-        // return view('game-player.start-game', ['id' => $gamePlayer->id]);
-        return redirect()->route('start-game', ['id' => $gamePlayer->id]);
+        return redirect()->route('start-game', ['player' => $gamePlayer->slug]);
     }
 
-    public function startGame($id) {
-        return view('game-player.start-game', ['id' => $id]);
+
+    public function startGame(GamePlayer $player) {
+        return view('game-player.start-game', ['player' => $player]);
+    }
+
+
+    public function endGame(GamePlayer $player) {
+
+        $player->result = request('result');
+        $player->code = Str::random(8);
+        $player->save();
+
+        SendCodeMailToThePlayer::send($player);
+
+        return view('game-player.results', ['player' => $player, 'shareComponent' => ShareService::share($player)]);
     }
 
     public function export()

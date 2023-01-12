@@ -37,9 +37,7 @@
     <div class="container bg-gray-200">
         <h1>{{ env('APP_NAME') }}</h1>
         <h1>{{ $player->email }}</h1>
-        <h1>{{ $player->results[0] }}</h1>
-        <h1>{{ $player->results[1] }}</h1>
-        <h1>{{ $player->results[2] }}</h1>
+        <h1>{{ $player->result }}</h1>
         <h1>{{ $player->code }}</h1>
     </div>
     <div class="container mt-4">
