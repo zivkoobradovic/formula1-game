@@ -38,14 +38,11 @@
         <h1>{{ env('APP_NAME') }}</h1>
         <h1>{{ $player->email }}</h1>
         <h1>{{ $player->result }}</h1>
-        <h1>{{ $player->code }}</h1>
     </div>
     <div class="container mt-4">
         {!! $shareComponent !!}
     </div>
-    <div>
-        {!! QrCode::size(200)->generate($player->code) !!}
-    </div>
+
 
 </body>
 
