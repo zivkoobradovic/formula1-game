@@ -6,11 +6,6 @@ defineProps({
 </script>
 
 <template>
-    <!-- <div v-for="topPlayers in topTen">
-        hello
-        <div>{{ topPlayers.email }}</div>
-        <div>{{ topPlayers.results }}</div>
-    </div> -->
     <div class="py-5">
         <a class="p-3 rounded bg-green-400 hover:bg-green-300" :href="route('generate-csv')">Download CSV File</a>
     </div>
