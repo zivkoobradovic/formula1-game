@@ -50,4 +50,5 @@ Route::middleware([
 Route::get('results/{player}', [GamePlayerController::class, 'show'])->name('share-url');
 
 Route::post('/initiate-game', [GamePlayerController::class, 'initiateGame'])->name('initiate-game');
-Route::get('/start-game/{id}', [GamePlayerController::class, 'startGame'])->name('start-game');
+Route::get('/start-game/{player}', [GamePlayerController::class, 'startGame'])->name('start-game');
+Route::post('/end-game/{player}', [GamePlayerController::class, 'endGame'])->name('end-game');
