@@ -52,3 +52,6 @@ Route::get('results/{player}', [GamePlayerController::class, 'show'])->name('sha
 Route::post('/initiate-game', [GamePlayerController::class, 'initiateGame'])->name('initiate-game');
 Route::get('/start-game/{player}', [GamePlayerController::class, 'startGame'])->name('start-game');
 Route::post('/end-game/{player}', [GamePlayerController::class, 'endGame'])->name('end-game');
+
+
+// Register route disabled at config/fortify.php Features::registration()

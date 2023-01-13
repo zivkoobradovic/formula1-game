@@ -16,12 +16,15 @@ return new class extends Migration
         Schema::create('game_players', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
+            $table->string('username')->unique();
+            $table->string('phone')->nullable();
+            $table->string('avatar');
             $table->string('slug')->unique();
-            $table->string('status')->nullable();
+            $table->boolean('status')->default(false);
             $table->string('result')->nullable();
             $table->string('start_time')->nullable();
             $table->string('end_time')->nullable();
-            $table->string('code')->unique()->nullable();
+            $table->string('code')->default('no code')->unique();
             $table->timestamps();
         });
     }

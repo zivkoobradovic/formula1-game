@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Welcome {{ $details['username'] }}</h1>
     <p>Your code is {{ $details['code'] }}</p>
+    <p>Your result is {{ $details['result'] }}</p>
     <p>Link to view your <a href="{{ $details['result_url'] }}">Result</a></p>
     <div>
         {!! QrCode::size(200)->generate($details['code']) !!}
