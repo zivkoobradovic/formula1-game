@@ -105,6 +105,9 @@ class GamePlayerController extends Controller
             [
                 'email' => request('email'),
                 'slug' => Str::random(12),
+                'avatar' => request('avatar'),
+                'username' => request('username'),
+                'phone' => request('phone'),
             ]
         );
 
@@ -121,6 +124,7 @@ class GamePlayerController extends Controller
 
         $player->result = request('result');
         $player->code = Str::random(8);
+        $player->status = true;
         $player->save();
 
         SendCodeMailToThePlayer::send($player);

@@ -43,9 +43,44 @@ defineProps({
                         <label for="email" class="block mb-2 text-sm font-medium text-white">Your
                             email</label>
                         <input type="email" id="email" name="email"
-                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-green-200 dark:border-green-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-green-200 dark:border-green-700 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                             placeholder="youremail@please.com" required>
                     </div>
+                    <div>
+                        <label for="username" class="block mb-2 text-sm font-medium text-white">Username</label>
+                        <input type="username" id="username" name="username"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-green-200 dark:border-green-700 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                            placeholder="Username">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2 text-sm font-medium text-white">Your
+                            Phone (optional)</label>
+                        <input type="phone" id="phone" name="phone"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-green-200 dark:border-green-700 dark:placeholder-gray-400 dark:text-gray-800 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="phone number (optional)">
+                    </div>
+
+                <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose Your Avatar</h3>
+                <ul class="grid w-full gap-6 md:grid-cols-2">
+                    <li>
+                        <input type="radio" id="male" name="avatar" value="male" class="hidden peer" required>
+                        <label for="male"
+                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 peer-checked:bg-blue-800 dark:hover:bg-blue-400">
+                            <div class="block m-auto">
+                                <div class="w-full text-lg font-semibold">Boy</div>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="female" name="avatar" value="female" class="hidden peer">
+                        <label for="female"
+                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-pink-300 peer-checked:border-pink-300 peer-checked:text-pink-300 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 peer-checked:bg-pink-800 dark:hover:bg-pink-400">
+                            <div class="block m-auto">
+                                <div class="w-full text-lg font-semibold">Girl</div>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+
                     <!-- <div>
                         <label for="subject"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
